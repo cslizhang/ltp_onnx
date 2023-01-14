@@ -5,7 +5,9 @@
 
 #### 使用说明
 
-句子转换成token id,已经有很多实现，这里直接调用的ltp自身，如有需要请自己写个转换，很简单。
+1. ***base_model.onnx***文件太大，请下载后放置model文件夹下。
+链接: https://pan.baidu.com/s/1NcMc8LdAja1vxVc2v7VQ1Q  密码: 9doc
+2. 句子转换成token id,已经有很多实现，这里直接调用的ltp，因此需要安装ltp。如有需要请自己写个转换，也很简单。
 
 #### 致谢
 
