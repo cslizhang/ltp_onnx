@@ -37,7 +37,7 @@ class LTP_Onnx:
                                    'attention_mask': self.tokenized['attention_mask'].numpy()})
         self.outputs = ort_outputs[0]
 
-    def cws(self, sentences):
+    def cws(self, sentences: list) -> list:
         self.base(sentences)
         mask = self.tokenized['attention_mask']
         sess_options = onnxruntime.SessionOptions()
@@ -66,6 +66,6 @@ class LTP_Onnx:
 
 if __name__ == "__main__":
     ltp = LTP_Onnx('../model')
-    sentences = ['他叫汤姆去拿外衣。', '中文自然语言处理技术平台']
-    cws_result = ltp.cws(sentences)
+    sents = ['他叫汤姆去拿外衣。', '中文自然语言处理技术平台']
+    cws_result = ltp.cws(sents)
     print(cws_result)
